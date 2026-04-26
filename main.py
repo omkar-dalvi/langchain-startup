@@ -25,8 +25,8 @@ def main():
         template=summary_template
     )
     
-    # llm = ChatOpenAI(temperature=0, model="gpt-5.4-nano")
-    llm = ChatOllama(temperature=0, model='gemma3:270m')
+    llm = ChatOpenAI(temperature=0, model="gpt-5.4-nano")
+    # llm = ChatOllama(temperature=0, model='gemma3:270m')
     
     chain = summary_prompt_template | llm
     response = chain.invoke(input={"information": information})
