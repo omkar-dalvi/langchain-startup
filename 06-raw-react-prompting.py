@@ -65,7 +65,7 @@ def get_tool_description(tool_dict):
     return "/n".join(descriptions)
 
 
-@traceable(name="Ollama Agent Loop")
+@traceable(name="ReAct prompting Ollama Agent Loop")
 def run_agent(query: str):
     # Defining tool lists
     tools = {
