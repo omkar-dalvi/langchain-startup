@@ -24,7 +24,10 @@ def main():
     tools = [TavilySearch()]
     agent = create_agent(model=llm, tools=tools, response_format=AgentResponse)
     response = agent.invoke({'messages': [HumanMessage(content="What the whether in Tokyo?")]})
-    print(response)
+    
+    # OR
+    # response = llm.with_structured_output(AgentResponse)
+    # print(response)
     
     
     
